@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mycron:
+    image: mycron:1.0.0
+    restart: always
+    container_name: mycron
+    networks:
+      - proxy
+    privileged: true
+networks:
+  proxy:
+    external: true
+    name: rjzou-proxy
+
